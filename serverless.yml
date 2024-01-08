@@ -1,0 +1,37 @@
+service: aws-node-ts-culqi-test
+frameworkVersion: "3"
+plugins:
+  - serverless-webpack
+  - serverless-dotenv-plugin
+  - serverless-offline
+package:
+  individually: false
+custom:
+  webpack:
+    webpackConfig: webpack.config.js
+    includeModules: true
+    packager: "npm"
+useDotenv: true
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+functions:
+  tokenizeCard:
+    handler: src/functions/tokenizeCard/index.handler
+    events:
+      - httpApi:
+          path: /tokenize-card
+          method: post
+  findCard:
+    handler: src/functions/findCard/index.handler
+    events:
+      - httpApi:
+          path: /find-card
+          method: get
+  login:
+    handler: src/functions/login/index.handler
+    events:
+      - httpApi:
+          path: /login
+          method: post

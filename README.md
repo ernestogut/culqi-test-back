@@ -1,0 +1,106 @@
+# Culqi Test Backend - Ernesto Gutierrez Cuba
+
+## Descripción
+
+Este proyecto esta desarrollado con Node.js, TypeScript, Serverless Framework, MongoDB y MySQL.
+
+## Requisitos
+
+- Node.js 18.x o superior
+- MySQL 5.7 o superior
+- MongoDB 4.4 o superior
+- Serverless Framework instalado (`npm install -g serverless`)
+
+## Instalación
+
+1. Clona este repositorio: `git clone https://github.com/ernestogut/serverless-node-ts-test.git`
+2. Ingresa al directorio del proyecto: `cd aws-node-ts-culqi-test`
+3. Instala las dependencias: `npm install`
+
+## Configuración
+
+1. Agrega las siguientes variables de entorno en el archivo .env, utilizando el .env.example como guía:
+
+```bash
+MONGODB_URI=mongodb://localhost:27017/culqi_test
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=culqi_users
+DB_USERNAME=root
+DB_PASSWORD=root
+SHOP_USERNAME=ernestogut
+SHOP_PASSWORD=123456
+```
+
+2. Ejecuta migraciones para los usuarios en MySQL: `npm run migration`
+
+## Postman
+
+Abre Postman, dale click al MenuBar/File/Import y arrastra el archivo: `culqi-test.postman_collection.json` a la ventana que aparece en la pantalla de la aplicación.
+
+## Despliegue
+
+Para desplegar la aplicación en un entorno local, ejecuta el comando:
+
+```
+sls offline
+```
+
+Para desplegar la aplicación en AWS, ejecuta el comando:
+
+```
+sls deploy
+```
+
+## Uso
+
+### Ruta POST (Users)
+
+- **Endpoint:** `/login`
+- **Descripción:** Inicia sesion en la aplicacion.
+- **Método:** POST
+- **Cuerpo de la solicitud:**
+  ```json
+  {
+    "username": "ernestogut",
+    "password": "123456"
+  }
+  ```
+- **Respuesta exitosa:** Código de estado 200 OK y cuerpo JSON con el mensaje y los datos del usuario logeado.
+
+### Ruta POST (Cards)
+
+- **Endpoint:** `/tokenize-card`
+- **Descripción:** Registra una tarjeta de credito y genera un token para su posterior uso en los servicios de Culqi.
+- **Método:** POST
+- **Encabezados:**
+  - Authorization: PK del comercio
+- **Cuerpo de la solicitud:**
+  ```json
+  {
+    "card_number": 370353664302622,
+    "cvv": 4532,
+    "expiration_month": "2",
+    "expiration_year": "2028",
+    "email": "ernesto@gmail.com"
+  }
+  ```
+- **Respuesta exitosa:** Código de estado 200 OK y cuerpo JSON con el token generado.
+
+### Ruta GET (Cards)
+
+- **Endpoint:** `/find-card`
+- **Descripción:** Obtiene los datos de la tarjeta relacionada al token generado.
+- **Método:** GET
+- **Encabezados:**
+  - Authorization: Token generado
+  - AuthorizationPK: PK del comercio
+- **Respuesta exitosa:** Código de estado 200 OK y cuerpo JSON con los datos de la tarjeta.
+
+## Pruebas unitarias
+
+Para ejecutar las pruebas unitarias, utiliza el comando:
+
+```
+npm test
+```

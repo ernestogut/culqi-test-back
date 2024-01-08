@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "e0f7e068-123e-4713-80c5-cd2f622520c2",
+		"name": "Culqi Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11707017"
+	},
+	"item": [
+		{
+			"name": "TOKENIZE_CARD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "pk_test_jkgaUcgwuCFkPKSs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"card_number\": 370353664302622,\n    \"cvv\": 4532,\n    \"expiration_month\": \"2\",\n    \"expiration_year\": \"2028\",\n    \"email\": \"ernestogutttt@gmail.com\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"ernestogut\",\n        \"password\": \"cubosderubik14\",\n        \"shop\": {\n            \"id\": 1,\n            \"shopName\": \"Tienda 1\",\n            \"privateKey\": \"pk_test_r8I8ZWxIZEujk8kl\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tokenize-card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tokenize-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND_CARD",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "TOuOQ2RfS5SyL4OL",
+						"type": "text"
+					},
+					{
+						"key": "AuthorizationPK",
+						"value": "pk_test_r8I8ZWxIZEujk8kl",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/find-card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"find-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"ernestogut\",\n    \"password\": \"cubosderubik14\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
