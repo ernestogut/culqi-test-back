@@ -46,7 +46,7 @@ Abre Postman, dale click al MenuBar/File/Import y arrastra el archivo: `culqi-te
 Para desplegar la aplicación en un entorno local, ejecuta el comando:
 
 ```
-sls offline
+sls offline start
 ```
 
 Para desplegar la aplicación en AWS, ejecuta el comando:

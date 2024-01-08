@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "e0f7e068-123e-4713-80c5-cd2f622520c2",
-		"name": "Culqi Test",
+		"_postman_id": "dc8da130-1833-4edb-8c1d-d580b49faa52",
+		"name": "Culqi Test Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11707017"
 	},
@@ -13,13 +13,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "pk_test_jkgaUcgwuCFkPKSs",
+						"value": "pk_test_lekpnFMVRoitVkVj",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"card_number\": 370353664302622,\n    \"cvv\": 4532,\n    \"expiration_month\": \"2\",\n    \"expiration_year\": \"2028\",\n    \"email\": \"ernestogutttt@gmail.com\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"ernestogut\",\n        \"password\": \"cubosderubik14\",\n        \"shop\": {\n            \"id\": 1,\n            \"shopName\": \"Tienda 1\",\n            \"privateKey\": \"pk_test_r8I8ZWxIZEujk8kl\"\n        }\n    }\n}",
+					"raw": "{\n    \"card_number\": 370353664302622,\n    \"cvv\": 4532,\n    \"expiration_month\": \"2\",\n    \"expiration_year\": \"2028\",\n    \"email\": \"ernesto@gmail.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -50,12 +50,12 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "TOuOQ2RfS5SyL4OL",
+						"value": "knnMAiyQMTBzL6zn",
 						"type": "text"
 					},
 					{
 						"key": "AuthorizationPK",
-						"value": "pk_test_r8I8ZWxIZEujk8kl",
+						"value": "pk_test_lekpnFMVRoitVkVj",
 						"type": "text"
 					}
 				],
@@ -89,7 +89,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"ernestogut\",\n    \"password\": \"cubosderubik14\"\n}",
+					"raw": "{\n    \"username\": \"ernestogut\",\n    \"password\": \"123456\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
