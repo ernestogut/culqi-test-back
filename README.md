@@ -13,8 +13,8 @@ Este proyecto esta desarrollado con Node.js, TypeScript, Serverless Framework, M
 
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/ernestogut/serverless-node-ts-test.git`
-2. Ingresa al directorio del proyecto: `cd aws-node-ts-culqi-test`
+1. Clona este repositorio: `git clone https://github.com/ernestogut/culqi-test-back.git`
+2. Ingresa al directorio del proyecto: `cd culqi-test-back`
 3. Instala las dependencias: `npm install`
 
 ## Configuración
@@ -32,7 +32,7 @@ SHOP_USERNAME=ernestogut
 SHOP_PASSWORD=123456
 ```
 
-2. Ejecuta migraciones para los usuarios en MySQL: `npm run migration`
+2. Ejecuta migraciones para crear un usuario por defecto en MySQL: `npm run migration`
 
 ## Postman
 
