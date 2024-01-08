@@ -107,3 +107,11 @@ Para ejecutar las pruebas unitarias, utiliza el comando:
 ```
 npm test
 ```
+
+## Documentación
+
+Una vez desplegado podemos acceder a la documentacion de Swagger en la siguiente ruta:
+
+```
+http://localhost:3000/swagger o https://<api-id>.execute-api.us-east-1.amazonaws.com/swagger
+```
