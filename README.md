@@ -113,5 +113,6 @@ npm test
 Una vez desplegado podemos acceder a la documentacion de Swagger en la siguiente ruta:
 
 ```
-http://localhost:3000/swagger o https://<api-id>.execute-api.us-east-1.amazonaws.com/swagger
+Ambiente Local: http://localhost:3000/swagger
+Producción: https://<api-id>.execute-api.us-east-1.amazonaws.com/swagger
 ```
