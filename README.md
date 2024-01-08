@@ -30,12 +30,12 @@ DB_PORT=3306
 DB_DATABASE=culqi_users
 DB_USERNAME=root
 DB_PASSWORD=root
-# Datos del usuario por defecto en la prueba
+# Datos del usuario por defecto en la prueba (con estas credenciales podras iniciar sesion en la aplicacion)
 SHOP_USERNAME=ernestogut
 SHOP_PASSWORD=123456
 ```
 
-2. Ejecuta migraciones para crear un usuario por defecto en MySQL: `npm run migration`
+2. Ejecuta migraciones para crear el usuario por defecto en MySQL: `npm run migration`
 
 ## Postman
 

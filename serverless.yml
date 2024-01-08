@@ -1,6 +1,7 @@
 service: aws-node-ts-culqi-test
 frameworkVersion: "3"
 plugins:
+  - serverless-auto-swagger
   - serverless-webpack
   - serverless-dotenv-plugin
   - serverless-offline
@@ -11,6 +12,8 @@ custom:
     webpackConfig: webpack.config.js
     includeModules: true
     packager: "npm"
+  autoswagger:
+    typefiles: ["node_modules/@types/node/index.d.ts"]
 useDotenv: true
 provider:
   name: aws
