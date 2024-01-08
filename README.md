@@ -53,15 +53,12 @@ Para desplegar la aplicación en un entorno local, ejecuta el comando:
 sls offline start
 ```
 
-Para desplegar la aplicación en AWS, ejecuta el comando: (debes tener configurado el AWS CLI)
+Para desplegar la aplicación en AWS debes tener configurado el AWS CLI
 
 1. Descargar AWS CLI (https://aws.amazon.com/cli/)
 2. Abrir una terminal y ejecutar el comando: `aws configure`
 3. Ingresar las credenciales de AWS (Access Key ID, Secret Access Key, Default region name)
-
-```
-sls deploy
-```
+4. Ejecuta el comando `sls deploy`
 
 ## Uso
 
