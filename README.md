@@ -22,12 +22,15 @@ Este proyecto esta desarrollado con Node.js, TypeScript, Serverless Framework, M
 1. Agrega las siguientes variables de entorno en el archivo .env, utilizando el .env.example como guía:
 
 ```bash
+# URI de conexión a MongoDB
 MONGODB_URI=mongodb://localhost:27017/culqi_test
+# Datos de conexión a MySQL
 DB_HOST=localhost
 DB_PORT=3306
 DB_DATABASE=culqi_users
 DB_USERNAME=root
 DB_PASSWORD=root
+# Datos del usuario por defecto en la prueba
 SHOP_USERNAME=ernestogut
 SHOP_PASSWORD=123456
 ```
